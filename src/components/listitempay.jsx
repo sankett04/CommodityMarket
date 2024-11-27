@@ -36,7 +36,7 @@ const Listitempay = () => {
               <h1 className="text-2xl font-bold text-green-600 ml-2">Required information</h1>
             </div>
             <img
-              src="https://placehold.co/400x300"
+              src="https://www.google.com/imgres?q=payment%20image&imgurl=https%3A%2F%2Fquickbooks.intuit.com%2Foidam%2Fintuit%2Fsbseg%2Fen_us%2FBlog%2FGraphic%2Fpayment-terms-header-image-us-en.jpg&imgrefurl=https%3A%2F%2Fquickbooks.intuit.com%2Fr%2Fbookkeeping%2Fchoosing-and-defining-invoice-payment-terms%2F&docid=9UjusV8Sp9PiOM&tbnid=ruIUUjbocDf9bM&vet=12ahUKEwjN44bf_vyJAxU0zDgGHQA1In8QM3oECBsQAA..i&w=900&h=506&hcb=2&ved=2ahUKEwjN44bf_vyJAxU0zDgGHQA1In8QM3oECBsQAA"
               alt="Cartoon character holding a money bag with financial growth symbols"
               className="mb-4"
             />

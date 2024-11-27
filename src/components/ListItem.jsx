@@ -162,7 +162,7 @@ function ListItem() {
             alert('Product added successfully!');
 
         // Redirect to ListItemPay page
-             navigate('/listitempay'); 
+             navigate('/'); 
 
         } catch (error) {
             console.error('Error saving item:', error.response ? error.response.data : error);
