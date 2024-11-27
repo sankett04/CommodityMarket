@@ -35,11 +35,11 @@ export default function Navbar() {
 
         <div className="flex items-center cursor-pointer" onClick={() => navigate("/")}>
           <img
-            src="/images/logodd.png"
+            src="/images/favicon.ico"
             alt="Logo"
             className="mr-2"
           />
-          <span className="text-xl font-bold">AgriMart</span>
+          <span className="text-xl font-bold">FMart</span>
         </div>
 
         <nav className="flex space-x-4 ml-4">

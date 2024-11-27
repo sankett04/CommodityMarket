@@ -19,7 +19,7 @@ const LeadsListBuyers = () => {
         const formattedLeads = result.map(item => ({
           transactionType:item.transactionType,
           title: item.commodityName,
-          image: item.imageUrl,
+          image: 'http://localhost:5000${item.imageUrl}',
           location: `${item.state}, ${item.district}`,
           description: item.description,
           phoneNumber: item.phoneNumber,
