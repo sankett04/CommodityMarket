@@ -125,13 +125,10 @@ function ListItem() {
         formDataToSend.append('phoneNumber', phoneNumber);
         
 // Optional field
-    
-         //Append the image file (if exists)
+    //Append the image file (if exists)
         if (formData.imageUrl) {
             formDataToSend.append('imageUrl', formData.imageUrl);
-        }
-        
-    
+        }    
         try {
             const response = await axios.post('http://localhost:5000/api/commodities', formDataToSend, {
                 headers: {

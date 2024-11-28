@@ -1,9 +1,15 @@
 // backend/db.js
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://sanket04:Agrimart123@agrimart.ck8mr.mongodb.net/?retryWrites=true&w=majority&appName=Agrimart', {
+        const mongoURI = process.env.MONGODB_URI;  // Use the environment variable
+
+        if (!mongoURI) {
+            throw new Error('MONGODB_URI is not defined in the environment variables');
+        }
+        await mongoose.connect(mongoURI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
