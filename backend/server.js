@@ -11,6 +11,7 @@ const twilioService = require('./services/twilioService');
 const Product = require('./models/Product');
 const Buyers = require('./models/Buyers');
 const Sellers = require('./models/Sellers');
+const User = require('./models/users');
 require('dotenv').config();
 
 const razorpay = new Razorpay({
@@ -202,6 +203,30 @@ app.post('/api/create-order', async (req, res) => {
     }
   });
   
+  // Handle POST request for saving user data
+app.post('/api/users', async (req, res) => {
+  const { firstName, lastName, gender, address, country, state, city,  } = req.body;
+
+  try {
+    // Create a new user document with the data from the request
+    const newUser = new User({
+      firstName,
+      lastName,
+      gender,
+      address,
+      country,
+      state,
+      city,
+    });
+
+    // Save the new user to the database
+    await newUser.save();
+    res.status(200).json({ message: 'User data saved successfully', user: newUser });
+  } catch (error) {
+    console.error('Error saving user data:', error);
+    res.status(500).json({ message: 'Error saving user data', error });
+  }
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);

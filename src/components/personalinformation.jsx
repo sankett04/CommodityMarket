@@ -52,12 +52,7 @@ const PersonalInformation = () => {
       address,
       country,
       state,
-      district,
       city,
-      phoneNumber,
-      alternateEmail,
-      businessType,
-      email,
     };
 
     try {
@@ -209,8 +204,8 @@ const PersonalInformation = () => {
                   >
                     <option value="">Select</option>
                     <option value="Maharashtra">Maharashtra</option>
-                    <option value="California">California</option>
-                    <option value="London">London</option>
+                    <option value="California">Uttar Pradesh</option>
+                    <option value="London">Madhya Pradesh</option>
                   </select>
                 </div>
               </div>
